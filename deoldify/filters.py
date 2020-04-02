@@ -95,15 +95,13 @@ class ColorizerFilter(BaseFilter):
         color_np = np.asarray(raw_color)
         orig_np = np.asarray(orig)
         if not post_process:
-            color_np = self.add_intensity(color_np)
+            color = self.add_intensity(color_np)
+
             blurred = cv2.GaussianBlur(orig_np, (5,5),1)
             res_blur = cv2.addWeighted(blurred, 0.75, orig_np, 0.25, 0)
-            color_np = cv2.addWeighted(res_blur, 0.5, color_np, 0.5, 0)
-            color_np = self.add_intensity(color_np, intensity=0.9)
-            return PilImage.fromarray(color_np)
-
-        color_np = np.asarray(raw_color)
-        orig_np = np.asarray(orig)
+            color = cv2.addWeighted(res_blur, 0.5, color, 0.5, 0)
+            combined = self.add_intensity(color, intensity=0.9)
+            return PilImage.fromarray(combined)
         color_yuv = cv2.cvtColor(color_np, cv2.COLOR_BGR2YUV)
         # do a black and white transform first to get better luminance values
         orig_yuv = cv2.cvtColor(orig_np, cv2.COLOR_BGR2YUV)
