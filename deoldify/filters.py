@@ -98,7 +98,7 @@ class ColorizerFilter(BaseFilter):
             color = self.add_intensity(color_np)
 
             blurred = cv2.GaussianBlur(orig_np, (5,5),1)
-            res_blur = cv2.addWeighted(blurred, 0.75, orig_np, 0.25, 0)
+            res_blur = cv2.addWeighted(orig_np, 0.75,blurred , 0.25, 0)
             color = cv2.addWeighted(res_blur, 0.5, color, 0.5, 0)
             combined = self.add_intensity(color, intensity=0.9)
             return PilImage.fromarray(combined)
