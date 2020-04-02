@@ -79,6 +79,12 @@ class ColorizerFilter(BaseFilter):
     def _transform(self, image: PilImage) -> PilImage:
         return image.convert('LA').convert('RGB')
 
+    def add_intensity(self, img, intensity=1.7):
+        if intensity==1:
+            return img
+        inter_const = 255. **(1-intensity)
+        return (inter_const * (img**intensity)).astype(np.uint8)
+
     # This takes advantage of the fact that human eyes are much less sensitive to
     # imperfections in chrominance compared to luminance.  This means we can
     # save a lot on memory and processing in the model, yet get a great high
@@ -86,8 +92,16 @@ class ColorizerFilter(BaseFilter):
     # inference
     def _post_process(self, raw_color: PilImage, orig: PilImage, post_process: bool) -> PilImage:
         raw_color = self._unsquare(raw_color, orig)
+        color_np = np.asarray(raw_color)
+        orig_np = np.asarray(orig)
         if not post_process:
-            return raw_color
+            color_np = self.add_intensity(color_np)
+            blurred = cv2.GaussianBlur(orig_np, (5,5),1)
+            res_blur = cv2.addWeighted(blurred, 0.75, orig_np, 0.25, 0)
+            color_np = cv2.addWeighted(res_blur, 0.5, color_np, 0.5, 0)
+            color_np = self.add_intensity(color_np, intensity=0.9)
+            return PilImage.fromarray(color_np)
+
         color_np = np.asarray(raw_color)
         orig_np = np.asarray(orig)
         color_yuv = cv2.cvtColor(color_np, cv2.COLOR_BGR2YUV)
