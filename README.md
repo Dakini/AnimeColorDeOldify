@@ -5,10 +5,14 @@
 
 ----------------------------
 
-Image  [<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/Dakini/AnimeColorDeOldify/blob/master/ImageColorizerColab.ipynb) |
+Image  [<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/Dakini/AnimeColorDeOldify/blob/master/ImageColorizerColab.ipynb) 
+
 GrayScale Images [<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/Dakini/AnimeColorDeOldify/blob/master/ImageColorizerColabGrayScale.ipynb)
+
 Digital Sketches [<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/Dakini/AnimeColorDeOldify/blob/master/ImageColorizerColabSketch.ipynb)
+
 Sketches to Shading (tempremental) [<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/Dakini/AnimeColorDeOldify/blob/master/ImageColorizerColabSketch2Gray.ipynb)
+
 
 **NEW** Having trouble with the default image colorizer, aka "artistic"?  Try the "stable" one below.  It generally won't produce colors that are as interesting as "artistic", but the glitches are noticeably reduced.  
 
