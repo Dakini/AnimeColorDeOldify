@@ -14,10 +14,6 @@ Digital Sketches [<img src="https://colab.research.google.com/assets/colab-badge
 Sketches to Shading (tempremental) [<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/Dakini/AnimeColorDeOldify/blob/master/ImageColorizerColabSketch2Gray.ipynb)
 
 
-**NEW** Having trouble with the default image colorizer, aka "artistic"?  Try the "stable" one below.  It generally won't produce colors that are as interesting as "artistic", but the glitches are noticeably reduced.  
-
-Image (stable) [<img src="https://colab.research.google.com/assets/colab-badge.svg" align="center">](https://colab.research.google.com/github/jantic/DeOldify/blob/master/ImageColorizerColabStable.ipynb)
-
 The easiest way to learn how to use the Colabs, are the same those used in the DeOldify repository, which has kinldy been provided by  in video tutorial form by Old Ireland in Colour's John Breslin. Click video image below to watch.
 
 [![](http://img.youtube.com/vi/VaEl0faDw38/0.jpg)](http://www.youtube.com/watch?v=VaEl0faDw38)
