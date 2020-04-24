@@ -1,7 +1,7 @@
 
 # Anime/Sketch/Manga Coloriser trained with DeOldify
 ![](https://i.imgur.com/UnAsqFr.jpg)
-**Quick Start**: The easiest way to colorize images using This model trained via DeOldify (for free!) is here: [Image Colorisation on Colab](https://colab.research.google.com/github/Dakini/AnimeColorDeOldify/blob/master/ImageColorizerColab.ipynb)
+**Quick Start**: The easiest way to colorize images using This model trained via DeOldify (for free!) is via one of the colabs below!
 
 ----------------------------
 
