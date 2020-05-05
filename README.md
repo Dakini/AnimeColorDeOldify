@@ -94,7 +94,7 @@ However, I used the same training code from the Artistic jupyter notebook avaiab
 
 I used the danbooru dataset, which you can find more information [here](https://www.gwern.net/Danbooru2019). The dataset is a total of ~3 TB, with over 3 millions images. 
 
-ITo start right away on your own machine with your own images or videos without training the models yourself, you'll need to download the pretrained models.They can be found here 
+To start right away on your own machine with your own images or videos without training the models yourself, you'll need to download the pretrained models.They can be found here 
 
 - [Image](https://www.dropbox.com/s/0m1rwdk7je1r39j/MQT9QHUfXxKpQ9b2CPda89htDBzFtmHD9r2YZsHp.pth?dl=0)
 - [GrayScale](https://www.dropbox.com/s/ojrwwsre1gt6sfx/UDLVQJgsv5RwrTkVWAhS9LrdGDFzdbuN2SFxCFsZ.pth?dl=0 )
